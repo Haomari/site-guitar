@@ -287,7 +287,7 @@ body {
 }
 .decor-main__image::after {
   content: "";
-  background: url(/img/svg/logo.svg) 0 0 no-repeat;
+  background: url(../img/svg/logo.svg) 0 0 no-repeat;
   width: 80px;
   height: 80px;
   position: absolute;
