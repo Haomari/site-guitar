@@ -42,8 +42,6 @@ overflow: hidden;
 		gap: 131px;
 		min-height: 152px;
 		align-items: center;
-		// justify-content: space-around;
-		// max-width: 650px;
 }
 
 	&__logo {
@@ -76,8 +74,36 @@ overflow: hidden;
 @media (max-width: 1140px) {
 	.header__container{
 		gap: 50px;
+		min-height: 100px;
+	}
+	.menu__list{
+		gap: 40px;
 	}
 }
+
+@media (max-width: 690px) {
+	.header__container{
+		gap: 50px;
+		min-height: 60px;
+	}
+	.menu__list{
+		gap: 40px;
+	}
+}
+	@media (max-width: 479.98px) {
+		.header__container{
+			gap: 15px;
+		}
+		.menu__list{
+			column-gap: 20px;
+		}
+		.header__logo{
+		width: 28px;
+		overflow: hidden;
+		flex: 0 0 28px;
+	}
+}
+
 
 //
 
@@ -108,7 +134,7 @@ overflow: hidden;
 		font-style: normal;
 		font-weight: 600;
 		font-size: 56px;
-		line-height: 67px;
+		line-height: 1.2;
 		& snap{
 			color: #FF6428;
 		}
@@ -141,14 +167,19 @@ overflow: hidden;
 	align-items: center;
 
 	&__button {
+		text-align: center;
 		padding: 18.5px 48px;
 		background: #FF6428;
 		border-radius: 40px;
 		color: #fff;
 		font-weight: 600;
 		line-height: 26px;
+		transition: all 0.2s ease 0s;
 		&:not(:last-child){
 			margin-right: 40px;
+		}
+		&:hover{
+			background: #c75021;
 		}
 
 	}
@@ -165,9 +196,13 @@ overflow: hidden;
 	&__image {
 		position: relative;
 		margin: 0px -135px 0px 0px;
-		display: inline-block;
+		// display: inline-block;
+		padding-bottom: 97.5%;
+		max-width: 672px;
 		& img{
-			max-width: 672px;
+			position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+			object-fit: cover;
+			border-radius: 0 0 150px 358px;
 		}
 	
 		&::after{
@@ -195,7 +230,44 @@ overflow: hidden;
 	}
 }
 
+@media (max-width: 690px) {
+	.decor-main{
+		display: none;
+	}
+	.main__content{
+		flex: 1 1 100%;
+		padding-right: 0;
+		padding-top: 80px;
+	}
+	.main__title{
+		font-size: 44px;
+	}
+}
+@media (max-width: 479.98px) {
+	.actions-main{
+		flex-wrap: wrap;
+		justify-content: center;
+		&__button{
+			flex: 1 1 100%;
+			&:not(:last-child){
+				margin-right: 0px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.main{
+		&__text{
+			text-align: center;
+		}
+		&__title{
+			text-align: center;
+		}
+	}
+	[class*="__container"]{
+		padding: 0px 10px;
+	}
 
+}
 
 
 
